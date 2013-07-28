@@ -1,111 +1,92 @@
 % LaTeX resume using res.cls
 \documentclass[margin]{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+
+\usepackage{hyperref}
+\usepackage{fontspec} % uses helvetica postscript font (download helvetica.sty)
+\setmainfont{Times New Roman}
 \setlength{\textwidth}{5.1in} % set width of text portion
 
 \begin{document}
 
-% Center the name over the entire width of resume:
- \moveleft2.5\hoffset\centerline{\large\bf Yuchen Wang}
-% Draw a horizontal line the whole width of resume:
- \moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
-% address begins here
-% Again, the address lines must be centered over entire width of resume:
- \moveleft.5\hoffset\centerline{Room 2502, Building 2, No.223 Yanping Road}
- \moveleft.5\hoffset\centerline{Shanghai, P. R. China, 200042}
- \moveleft.5\hoffset\centerline{ycwang0712@gmail.com, 86-137-88902573} 
+	% Center the name over the entire width of resume:
+	\moveleft2.57\hoffset\centerline{\large\bf Yuchen Wang}
+	% Draw a horizontal line the whole width of resume:
+	\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+	% address begins here
+	% Again, the address lines must be centered over entire width of resume:
+
+	\moveleft.5\hoffset\centerline{Room 2502, Building 2, \#223 Yanping Road}
+	\moveleft.5\hoffset\centerline{Shanghai, P. R. China, 200042}
+	\moveleft.5\hoffset\centerline{ycwang0712@gmail.com, +86 137-8890-2573} 
 
 
-\begin{resume}
- 
-\section{INTERESTED FIELDS} Data Mining \& Machine Learning 
-% \section{OBJECTIVE}Intern Data Analyst
+	\begin{resume} 
+		
+		\section{EDUCATION} 
+		{\sl Bachelor of Science, } Statistics  \hfill June 2013 \\
+		Dept. of Statistics and Actuarial Science,\\
+		East China Normal University, Shanghai \\
+		Thesis: Residual control chart based on semi-parametric regression models for clustered data.
+		
+		{\sl Secondary Major, } Computer Technology and Application \hfill June 2013 \\
+		Dept. of Computer Science and Engineering, \\
+		Shanghai Jiao Tong University, Shanghai \\
+		Thesis: Quality control software based on R and Java: Design and Implementation.
 
-\section{WORK EXPERIENCE} {\sl Market Research Analyst} \hfill Summer 2010 \\
-                Shanghai Association for Quality, Shanghai
-                 \begin{itemize}  \itemsep -2pt %reduce space between items
-                 \item Plan and conducted the Xujiahui Customer Satisfaction Survey.
-                 \item Involved in data analysis and writing of the general survey report.
-                \end{itemize}
- 
-                {\sl System Operation and Maintenance Intern} \hfill            Winter 2010 \\
-                Digital Resource, Shanghai
-                 \begin{itemize}  \itemsep -2pt %reduce space between items
-                 \item In charge of the operation and maintenance for Shanghai testing center's central control system.
-                 \item Participated in constructing the information infrastructure for Advanced Financial School of Shanghai Jiao Tong University.
-                 \end{itemize} 
-                 
-                {\sl Special Commissioner} \hfill        Summer 2009 \\
-                Cultural and Education Section, British Council, Shanghai
-                  \begin{itemize}
-                   \item As the captain of 20 young ambassadors, participated in the Young Ambassadors Climate Camp in Beijing, which aims for choosing excellent young ambassadors to attend COP15 at Copenhagen. 
-                   \end{itemize} 
- 
-\section{VOLUNTARY EXPERIENCE}{\sl Shanghai International Youth Science \& Technology Expo} \hfill        Summer 2010 \\
-Shanghai Municipal Science and Technology Commission
-\begin{itemize}  \itemsep -2pt %reduce space between items
-                 \item Be awarded as {\it Excellent Volunteer}.
-                 \item Photo works be selected as {\it Ten Most Moving Moments}.
-                 \end{itemize} 
-                 
-                 {\sl 2007 Special Olympics World Summer Games} \hfill        Summer 2007 \\
-                  Special Olympics Organizing Committee
-\begin{itemize}  \itemsep -2pt %reduce space between items
-                 \item Assist the election of Special Olympics Young Ambassadors.
-                 \end{itemize} 
- 
+		\section{RESEARCH \\EXPERIENCE} {\sl Quality Control in Tobacco Manufacture} \hfill June 2012 - present \\
+		Advisor: Prof. Xiaolong Pu \\
+		Cooperator: Shanghai Tobacco Group Co., Ltd.
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item In charge of the control problem of the tobacco dehumidification process, the most critical control unit in the whole process.  
+			\item Inspired by the monitoring plan of that process, I completed my undergraduate thesis about residual control chart. 
+			\item Developer of an R package \emph{ecnuspc} which implemented and organized all (including other project members') SPC methods used in this project.
+		\end{itemize}
+		
+		\section{INTERESTED \\FIELDS} 
+		Statistical Process Control, Statistical Learning and Data Mining.
 
-\section{INVITED \\TALKS}{\sl R and Object-oriented Statistical Analysis\\
- - the creation and usage of S3 and S4 objects} \hfill     November 4, 2012\\
- the 5th China-R Conference, Shanghai\\
- {\sl Introduction to LINGO} \hfill     October 2011\\
- Operations Research, East China Normal University
+		\section{INVITED \\PRESENTATIONS}
+		{\sl R and Object-oriented Statistical Analysis\\
+		 — the creation and usage of S3 and S4 objects} \hfill November 4, 2012\\
+		the 5th China-R Conference, Shanghai
 
-\section{EDUCATION} {\sl Bachelor of Science,} Statistics  \hfill      expected June 2013 \\
-                School of Finance and Statistics\\
-                East China Normal University, Shanghai\\                        
-                {\sl Secondary Major,} Computer Technology and Application \hfill   expected June 2013 \\
-                School of Electrical and Information Engineering \\
-                Shanghai Jiao Tong University, Shanghai\\
+		\section{INTERNSHIP} 
+		{\sl System Operation and Maintenance Intern} \hfill Winter 2010 \\
+		Digital Resource, Shanghai
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item Responsible for the operation and maintenance for Shanghai testing center's central control system.
+			\item Participated in constructing the informatization infrastructure for the Advanced Financial School of Shanghai Jiao Tong University.
+		\end{itemize} 
+		
+		\section{STANDARDIZED \\TESTS} 
+		{\sl GRE General} \hfill September 3, 2011 \\
+		Verbal 156(72\%), Quantitative 167(95\%), Analytical 3.5(29\%).
+		
+		{\sl ToEFL}  \hfill March 4, 2012 \\
+		Reading 27, Listening 24, Speaking 24, Writing 22, Total 97. 
+		
+		
+		\section{COMPUTER \\ SKILLS}
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item Expert in R. Developer and maintainer of the \emph{jtrans} package on CRAN (hosted on my GitHub: \url{https://github.com/wangyuchen}). 
+			\item Extensive object-oriented programming experience with C++. Familiar with MATLAB and LINGO in the aspect of mathematical modeling. Experience with SAS and SPSS. 
+			\item Knowledge of server managerment. The only administrator of the computing cluster at School of Finance and Statistics, ECNU. 
+		\end{itemize}
+		 
+		
+			% \item[Operating Systems] Mac OS X, GNU/Linux distributions including Debian and Ubuntu Server, UNIX.
+			% \item[Web Technology] Experience of building forum for school using PHP and MySQL. Current blog is a static website generated by JEKYLL using knowledge of Markdown, JavaScript, HTML5 and CSS3. Self-hosted a server for R, \LaTeX and MySQL.
+			% \item[Multimedia Processing] Keen on  softwares including Cool Edit, iMovie and Aperture. My works consists of all class activity videos, music mixes and a micro-movie I directed.
+			% \item[Others]Familiar with \LaTeX. Experience with Processing for visualization and interactive plots.		
 
+	\end{resume}
 
-\section{RESEARCH EXPERIENCE} {\sl Statistical Process Control in Tobacco Manufacture} \hfill June 2012 - present \\
-Instructor: Prof. Xiaolong Pu \\
-
-
-\section{EXTRA-CURRICULAR \\ ACTIVITIES}             
-            Attended ECNU 2012 Graduate Summer School in Statistics and Actuarial Science\\
-            School basketball team \\
-            University Amateur Swimming Team 
- 
-\section{AWARDS}
-\begin{description}
-  \item[Third Prize] Mathematical Contest in Modeling, East China Normal University.
-  \item[Successful Participant] Mathematical Contest In Modeling, COMAP.
-\end{description} 
- 
-
-\section{STANDARD TESTS} {\sl GRE General} \hfill September 3, 2011 \\
-                Verbal 156(72\%), Quantitative 167(95\%), Analytical 3.5(29\%) \\  
-                {\sl ToEFL}  \hfill March 4, 2012 \\
-                Reading 27, Listening 24, Speaking 24, Writing 22, Total 97. \\  
- 
- 
-\section{COMPUTER \\ SKILLS}
-
-\begin{description}
-\item[Statistical Computation] Professional in R. Programming for a SPC project totally in R. Active R developer in the COS group on GitHub. Programming for mathematics contest in modeling using MATLAB and LINGO. Experience with SAS and SPSS. 
-\item[Development] Extensive object-oriented programming experience in C++. Familiar with C. Familiar with script languages including BASH and Ruby. iOS development experience with Obj-C.
-\item[Operating Systems] Mac OS X, GNU/Linux distributions including Debian and Ubuntu Server, UNIX.
-\item[Web Technology] Experience of building forum for school using PHP and MySQL. Current blog is a static website generated by JEKYLL using knowledge of Markdown, JavaScript, HTML5 and CSS3. Self-hosted a server for R, \LaTeX and MySQL.
-\item[Multimedia Processing] Keen on  softwares including Cool Edit, iMovie and Aperture. My works consists of all class activity videos, music mixes and a micro-movie I directed.
-\item[Others]Familiar with \LaTeX. Experience with Processing for visualization and interactive plots.
-\end{description}
-
-
-\end{resume}
 \end{document}
+
+
+
+
+
 
 
 
