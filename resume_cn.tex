@@ -1,0 +1,112 @@
+% LaTeX resume using res.cls
+\documentclass[margin]{res}
+
+\usepackage{hyperref}
+\usepackage{fontspec} % uses helvetica postscript font (download helvetica.sty)
+\usepackage{xeCJK}
+\setCJKmainfont[BoldFont={Lantinghei SC Demibold}]{Songti SC Regular}
+\setlength{\textwidth}{5.1in} % set width of text portion
+
+\begin{document}
+
+	% Center the name over the entire width of resume:
+	\moveleft2.7\hoffset\centerline{\Large\bf 王雨晨}
+	% Draw a horizontal line the whole width of resume:
+	\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
+	% address begins here
+	% Again, the address lines must be centered over entire width of resume:
+	\moveleft.5\hoffset\centerline{上海市延平路223弄2号2502室，200042}
+	\moveleft.5\hoffset\centerline{ycwang0712@gmail.com, +86 137-8890-2573} 
+
+
+	\begin{resume} 
+		% \section{INTERESTED \\FIELDS} 
+		% Statistical Process Control, Statistical Learning and Data Mining.
+		
+		\section{教育背景} 
+		{\sl  理学学士， } 统计学  \hfill 2009年9月 – 2013年6月 \\
+		 华东师范大学金融与统计学院，统计与精算学系\\
+		毕业论文: 基于半参数回归模型的残差控制图
+		
+		{\sl 跨校辅修， } 计算机技术及应用 (36 学分) \hfill 2011年2月 – 2013年6月 \\
+		上海交通大学电子信息与电气工程学院，计算机系 \\
+		毕业论文: 基于 R 和 Java 的质量控制软件的设计与实现
+	
+		\section{研究经历} {\sl 烟草生产中的质量控制} \hfill 2012年7月至今 \\
+		导师: 濮晓龙教授 \\
+		合作者: 上海烟草集团
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item 负责烟草生产中最重要的叶丝干燥过程的控制问题。
+			\item 设计了一个基于半参数回归模型的监控方案：首先，利用半参数模型来估计纵向数据的均值和方差函数；然后进一步对其拟合时间序列 AR 模型来消除其自相关性；最后拟合 Johnson 曲线将描点统计量变换为正态并用传统 Shewhart 控制图监控。
+			\item 开发了 R 包 \emph{ecnuspc}，实现了整个项目组使用的全部 SPC 方法。
+			\item 已完成一篇关于使用岭估计代替普通最小二乘估计来解决预测变量中的自相关性的论文，仍在修改中。
+		\end{itemize}
+		
+		
+		\section{邀请报告}
+		{\sl Conducting Meta-analyses} \hfill 2013年5月15日\\
+		华东师范大学金融与统计学院
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item 介绍了 Meta分析的基本理论。
+			\item 演示了如何用 RevMan 和 R 做 Meta 分析。
+		\end{itemize}
+		
+		{\sl R 与面向对象统计分析} \hfill 2012年11月4日\\
+		第五届 R 语言会议，上海
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item 介绍了 R 中不同的对象系统(S3、S4和R5)及其对象的创建和使用。
+		\end{itemize} 
+		
+		
+		\section{计算机技能}
+		\begin{itemize}  \itemsep -2pt %reduce space between items
+			\item  精通 R 语言。CRAN 上的 R 包 \emph{jtrans} 的开发者，其源代码和其余作品可见我的 GitHub: \url{https://github.com/wangyuchen}。 
+			\item  有基于 C++ 的面向对象编程经验。熟悉 Matlab 和 LINGO 等软件的数学建模功能。会使用 SAS 和 SPSS 等统计软件。
+			\item 有 UNIX/Linux 服务器管理经验。现为华东师范大学金统学院高性能运算集群管理员。
+			% \item Semi-parametric regression models; panel data and missing data.
+% 			\item Web data extraction and data mining; Spatial analysis and geocoding; web-based data visualization using maps and interactive plots.
+		\end{itemize}
+		
+		
+		% \section{WORK \\EXPERIENCE} 
+		% {\sl System Operation and Maintenance Intern} \hfill Winter 2010 \\
+		% Digital Resource, Shanghai
+		% \begin{itemize}  \itemsep -2pt %reduce space between items
+		% 	\item Responsible for the operation and maintenance for Shanghai testing center's central control system.
+		% 	\item Participated in constructing the informatization infrastructure for the Advanced Financial School of Shanghai Jiao Tong University.
+		% \end{itemize} 
+		% 
+		% {\sl Market Research Analyst} \hfill Summer 2010 \\
+		%         Shanghai Association for Quality, Shanghai
+		%         \begin{itemize}  \itemsep -2pt %reduce space between items
+		% 	\item Plan and conducted the Xujiahui Customer Satisfaction Survey.
+		%         	\item Involved in data analysis and general survey report writing.
+		%         \end{itemize}
+		
+		
+		\section{奖项}
+		\begin{description}
+		  \item[三等奖] 华东师范大学数学建模竞赛。
+		  \item[Successful Participant] 数学建模竞赛， COMAP。
+		\end{description} 
+		
+		% \section{STANDARDIZED \\TESTS} 
+% 		{\sl GRE General} \hfill September 3, 2011 \\
+% 		Verbal 156(72\%), Quantitative 167(95\%), Analytical 3.5(29\%).
+% 		
+% 		{\sl ToEFL}  \hfill March 4, 2012 \\
+% 		Reading 27, Listening 24, Speaking 24, Writing 22, Total 97. 
+		
+		
+	\end{resume}
+
+\end{document}
+
+
+
+
+
+
+
+
+
