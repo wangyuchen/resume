@@ -1,116 +1,207 @@
-% LaTeX resume using res.cls
-\documentclass[margin]{res}
+% resume.tex
+% vim:set ft=tex spell:
 
+\documentclass[10pt]{article}
+\usepackage[letterpaper, top=.2in, bottom=.2in, left=.5in, right=.5in]{geometry}
+\usepackage{mdwlist}
 \usepackage{hyperref}
-\usepackage{fontspec} % uses helvetica postscript font (download helvetica.sty)
-\setmainfont{Times New Roman}
-\setlength{\textwidth}{5.1in} % set width of text portion
 
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+
+% \usepackage[T1]{fontenc}
+% \usepackage{textcomp}
+% \usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+
+
+
+% and the actual content starts here
 \begin{document}
 
-	% Center the name over the entire width of resume:
-	\moveleft2.57\hoffset\centerline{\large\bf Yuchen Wang}
-	% Draw a horizontal line the whole width of resume:
-	\moveleft\hoffset\vbox{\hrule width\resumewidth height 1pt}\smallskip
-	% address begins here
-	% Again, the address lines must be centered over entire width of resume:
-	\moveleft.5\hoffset\centerline{Room 2502, Building 2, \#223 Yanping Road}
-	\moveleft.5\hoffset\centerline{Shanghai, P. R. China, 200042}
-	\moveleft.5\hoffset\centerline{ycwang0712@gmail.com, +86 137-8890-2573} 
+\begin{center}
+{\LARGE \textbf{YUCHEN WANG\\
+\ }}
+	\headerrow
+	{(573) 239-5737}
+	{2500 OLD HWY 63 S, APT 823}
+	\\
+	\headerrow
+	{\href{mailto://yuchen.wang@mizzou.edu}{yuchen.wang@mizzou.edu}}
+	{COLUMBIA, MO, 65201}
+\end{center}
 
 
-	\begin{resume} 
-		\section{INTERESTED \\FIELDS} 
-		Statistical Process Control, Statistical Learning and Data Mining.
-		
-		\section{EDUCATION} 
-		{\sl Bachelor of Science, } Statistics  \hfill Sep 2009 – June 2013 \\
-		Dept. of Statistics and Actuarial Science,\\
-		East China Normal University, Shanghai \\
-		Thesis: Residual control chart based on semi-parametric regression model.
-		
-		{\sl Minor, } Computer Technology and Application (36 credits) \hfill Feb 2011 – June 2013 \\
-		Dept. of Computer Science and Engineering, \\
-		Shanghai Jiao Tong University, Shanghai \\
-		Thesis: Quality control software based on R and Java: Design and Implementation.
+% \hrule
+% \vspace{-0.4em}
+% \subsection*{\centering OBJECTIVE}
+% 
+% Lorem ipsum dolor sit amet, consectetuer
+
+
+\hrule
+\vspace{-0.4em}
+
+
+\subsection*{\centering EDUCATION}
+
+\headerrow
+	{\textbf{M.A.~in Statistics}}
+	{\textbf{Jan 2014 – Present}}
+\\
+\headerrow
+	{Department of Statistics, University of Missouri-Columbia}
+	{Missouri, U.S.}
+\\
+\headerrow
+	{\textbf{B.S.~in Statistics}}
+	{\textbf{Sep 2009 – Jun 2013}}
+\\
+\headerrow
+	{Department of Statistics and Actuarial Science, East China Normal University}
+	{Shanghai, China}
+\\
+\headerrow
+	{\textbf{Minor (36 credits) in Computer Technology and Application}}
+	{\textbf{Feb 2011 – Jun 2013}}
+\\
+\headerrow
+	{Department of Computer Science and Engineering, Shanghai Jiao Tong University}
+	{Shanghai, China}
+\\
+
+
+\hrule
+\vspace{-0.4em}
+
+
+
+\subsection*{\centering PROFESSIONAL EXPERIENCE}
+\begin{unindentsection}{\parindent}
+	% {\parindent}
+% \hyphenpenalty=1000
+\begin{itemize}
+	\item
+	\headerrow
+		{\textbf{Research Assistant, East China Normal University, Shanghai}}
+		{\textbf{Jul 2012 – Dec 2013}}
+		\indent Research on theories and applications of statistical process control,
+		with focus on an applied project of quality control in tobacco
+		production. In charge of the control problem of a tobacco
+		dehumidification process, the most critical control unit among all
+		tobacco production processes.
+	\begin{itemize*}
+		\item
+		Facing statistical problems like: multivariate regression with time-lag, high
+		frequency time series, clustered data, contaminated data and non-normal
+		residual.
+		\item
+		Developer of an R package which contains all statistical algorithms,
+		data cleaning and visualization methods used in the project.
+		\item
+		Two papers were finished (unpublished): one is on semi-parametric
+		regression model for clustered data and another is on ridge estimator
+		in multivariate regression with correlated covariates.
+	\end{itemize*}
 	
-		\section{RESEARCH \\EXPERIENCE} {\sl Quality Control in Tobacco Manufacture} \hfill June 2012 – present \\
-		Advisor: Prof. Xiaolong Pu \\
-		Cooperator: Shanghai Tobacco Group Co., Ltd.
-		\begin{itemize}  \itemsep -2pt %reduce space between items
-			\item In charge of the control problem of tobacco dehumidification process, the most critical control unit in the whole process. 
-			\item Designed a monitoring plan using a semi-parametric regression model to estimate the mean and variance functions for clustered data, a time series AR model to eliminate autocorrelation in residuals and a Johnson curve fitting to transform control chart statistic to normality.
-			\item Developer of an R package \emph{ecnuspc} which implemented and organized all (including other project members') SPC methods used in this project.
-			\item Working on a paper about the effect of using different normality tests in Johnson transformations. 
-		\end{itemize}
+	\item
+	\headerrow
+		{\textbf{Operations and Maintenance Intern, Digital Resource, Shanghai}}
+		{\textbf{Jan 2011 – Feb 2011}}
+	\indent Responsible for the operation and maintenance for Shanghai Testing
+	Center's information system. Participated in building the information
+	infrastructure for Advanced Financial School of Shanghai Jiao Tong
+	University. Got knowledge and experience with Internet and computer
+	science.
+	
+	\item	
+	\headerrow
+		{\textbf{Analyst Intern, Shanghai Association for Quality, Shanghai}}
+		{\textbf{Jul 2010 – Aug 2010}}
+	\indent Planned and conducted the customer satisfaction survey sampling for the
+	Xujiahui business circle. Responsible for street interview, data entry,
+	collation, analysis and reporting writing, pretty much the whole cycle
+	of survey sampling.
+\end{itemize}
+\end{unindentsection}
+
+	
+\hrule
+\vspace{-0.4em}
+\subsection*{\centering PROFESSIONAL SKILLS}
+
+\begin{description*}
+	\item[Statistical Computing:] Outstanding skills in R. Developer and maintainer of a CRAN package \emph{jtrans}. More repos on my GitHub: \url{http://www.github.com/wangyuchen}. Proficient in SAS and SPSS for standard statistical analysis.
+	\item[Mathematical Modeling:] Adept in MATLAB and LINGO during Mathematical Contest in Modeling. Experience with Octave and Gnuplot during the \emph{Machine Learning} course on Coursera.
+	\item[Operating Systems:] Strong interest in Unix-like systems, especially in the aspect of server management. Builder and administrator of the high-performance computing cluster for the School of Finance and Statistics, ECNU, which provides cloud computing environment of R and MATLAB.
+	\item[General Purpose Programming:] Extensive object-oriented programming experience with \CPP. Experience with Java.
+	\item[Specialities in Statistics:] Semi-parametric models; longitudinal data; Time series Analysis; Bayesian analysis; Nonparametric methods and other computationally intensive statistical methods.
+	\item[Web:] Web data crawler; Spatial analysis and geocoding; Web-based data visualization using interactive plots; Experience with HTML and CSS; Blog in Jekyll and builder of \url{http://www.biostat.com.cn}; 
+	\item[Others:] Effective in \emph{knitr}, in which I can combine my favorite markup languages (Markdown/\LaTeX) with code/outputs produced by a script language (R).
+\end{description*}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{\centering TALKS AND HONORS}
+
+
+\begin{unindentsection}{\parindent}
+	\begin{itemize}
+		\item
+		\headerrow
+			{\emph{Say Goodbye to Copy and Paste in Statistical Analysis}, $1^{st}$ R salon, East China Normal University}
+			{\textbf{Dec 18, 2013}}
+		\item
+		\headerrow
+			{\emph{Conducting Meta-analyses}, School of Finance and Statistics, East China Normal University}
+			{\textbf{May 15, 2013}}
+		\item 
+		\headerrow
+			{\emph{R and Object-oriented Statistical Analysis}, $5^{th}$ China-R Conference, Shanghai}
+			{\textbf{Nov 4, 2012}}
+		\item 
+		\headerrow
+			{\textbf{Successful Participant}, Mathematical Contest in Modeling, COMAP}
+			{\textbf{Mar 2012}}
+		\item
+		\headerrow
+			{\textbf{Third Price}, Mathematical Contest in Modeling, East China Normal University}
+			{\textbf{Oct 2011}}
 		
-		
-		\section{INVITED \\PRESENTATIONS}
-		{\sl Conducting Meta-analyses} \hfill May 15, 2013\\
-		School of Finance and Statistics, ECNU
-		\begin{itemize}  \itemsep -2pt %reduce space between items
-			\item Introduced basic meta-analysis theories.
-			\item Demonstrated how to conduct meta-analysis in RevMan and R.
-		\end{itemize}
-		
-		{\sl R and Object-oriented Statistical Analysis} \hfill November 4, 2012\\
-		the 5th China-R Conference, Shanghai
-		\begin{itemize}  \itemsep -2pt %reduce space between items
-			\item Introduced the creation and usage of objects in different object systems (S3, S4 and R5) in R.
-			\item Recommended by Prof. Yincai Tang.
-		\end{itemize} 
-		
-		
-		\section{SKILLS}
-		{\sl Computer Skills}
-		\begin{itemize}  \itemsep -2pt %reduce space between items
-			\item Expert in R. Developer and maintainer of the \emph{jtrans} package on CRAN (hosted on my GitHub: \url{https://github.com/wangyuchen}). 
-			\item Extensive object-oriented programming experience with C++. Familiar with MATLAB and LINGO in the aspect of mathematical modeling. Experience with SAS and SPSS. 
-			\item Knowledge of server managerment. The only administrator of the computing cluster at School of Finance and Statistics, ECNU. 
-			\item Semi-parametric regression models; panel data and missing data.
-			\item Web data extraction and data mining; Spatial analysis and geocoding; web-based data visualization using maps and interactive plots.
-		\end{itemize}
-		
-		
-		\section{WORK \\EXPERIENCE} 
-		{\sl System Operation and Maintenance Intern} \hfill Winter 2010 \\
-		Digital Resource, Shanghai
-		\begin{itemize}  \itemsep -2pt %reduce space between items
-			\item Responsible for the operation and maintenance for Shanghai testing center's central control system.
-			\item Participated in constructing the informatization infrastructure for the Advanced Financial School of Shanghai Jiao Tong University.
-		\end{itemize} 
-		
-		{\sl Market Research Analyst} \hfill Summer 2010 \\
-        Shanghai Association for Quality, Shanghai
-        \begin{itemize}  \itemsep -2pt %reduce space between items
-			\item Plan and conducted the Xujiahui Customer Satisfaction Survey.
-        	\item Involved in data analysis and general survey report writing.
-        \end{itemize}
-		
-		
-		\section{AWARDS}
-		\begin{description}
-		  \item[Third Prize] Mathematical Contest in Modeling, East China Normal University.
-		  \item[Successful Participant] Mathematical Contest In Modeling, COMAP.
-		\end{description} 
-		
-		\section{STANDARDIZED \\TESTS} 
-		{\sl GRE General} \hfill September 3, 2011 \\
-		Verbal 156(72\%), Quantitative 167(95\%), Analytical 3.5(29\%).
-		
-		{\sl ToEFL}  \hfill March 4, 2012 \\
-		Reading 27, Listening 24, Speaking 24, Writing 22, Total 97. 
-		
-		
-	\end{resume}
+	\end{itemize}
+\end{unindentsection}
+
 
 \end{document}
-
-
-
-
-
-
-
-
-
