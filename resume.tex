@@ -2,9 +2,10 @@
 % vim:set ft=tex spell:
 
 \documentclass[10pt]{article}
-\usepackage[letterpaper, top=.2in, bottom=.2in, left=.5in, right=.5in]{geometry}
+\usepackage[letterpaper, margin=.5in]{geometry}
 \usepackage{mdwlist}
 \usepackage{hyperref}
+\usepackage{enumitem}
 
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
@@ -52,42 +53,35 @@
 \begin{document}
 
 \begin{center}
-{\LARGE \textbf{YUCHEN WANG\\
-\ }}
-	\headerrow
-	{(573) 239-5737}
-	{2500 OLD HWY 63 S, APT 823}
-	\\
-	\headerrow
-	{\href{mailto://yuchen.wang@mizzou.edu}{yuchen.wang@mizzou.edu}}
-	{COLUMBIA, MO, 65201}
+\huge \textbf{YUCHEN WANG\\}
 \end{center}
 
+\noindent\headerrow
+{(573) 239-5737}
+{2500 Old Highway 63 South, Apartment 823}
+\\
+\headerrow
+{\href{mailto://yuchen.wang@mizzou.edu}{yuchen.wang@mizzou.edu}}
+{Columbia, Missouri, 65201}
 
-% \hrule
-% \vspace{-0.4em}
-% \subsection*{\centering OBJECTIVE}
-% 
-% Lorem ipsum dolor sit amet, consectetuer
-
-
+\vspace{0.2em}
 \hrule
-\vspace{-0.4em}
+\vspace{-1em}
 
 
 \subsection*{\centering EDUCATION}
 
 \headerrow
-	{\textbf{M.A.~in Statistics}}
-	{\textbf{Jan 2014 – Present}}
+	{\textbf{Master of Arts in Statistics}}
+	{\textbf{expected June 2015}}
 \\
 \headerrow
 	{Department of Statistics, University of Missouri-Columbia}
-	{Missouri, U.S.}
+	{Missouri, United States}
 \\
 \headerrow
-	{\textbf{B.S.~in Statistics}}
-	{\textbf{Sep 2009 – Jun 2013}}
+	{\textbf{Bachelor of Science in Statistics}}
+	{\textbf{June 2013}}
 \\
 \headerrow
 	{Department of Statistics and Actuarial Science, East China Normal University}
@@ -95,87 +89,97 @@
 \\
 \headerrow
 	{\textbf{Minor (36 credits) in Computer Technology and Application}}
-	{\textbf{Feb 2011 – Jun 2013}}
+	{\textbf{June 2013}}
 \\
 \headerrow
 	{Department of Computer Science and Engineering, Shanghai Jiao Tong University}
 	{Shanghai, China}
-\\
 
 
+\vspace{0.2em}
 \hrule
-\vspace{-0.4em}
+\vspace{-1em}
 
 
 
-\subsection*{\centering PROFESSIONAL EXPERIENCE}
-\begin{unindentsection}{\parindent}
-	% {\parindent}
-% \hyphenpenalty=1000
-\begin{itemize}
-	\item
-	\headerrow
-		{\textbf{Research Assistant, East China Normal University, Shanghai}}
-		{\textbf{Jul 2012 – Dec 2013}}
-		\indent Research on theories and applications of statistical process control,
-		with focus on an applied project of quality control in tobacco
-		production. In charge of the control problem of a tobacco
-		dehumidification process, the most critical control unit among all
-		tobacco production processes.
-	\begin{itemize*}
-		\item
-		Facing statistical problems like: multivariate regression with time-lag, high
-		frequency time series, clustered data, contaminated data and non-normal
-		residual.
-		\item
-		Developer of an R package which contains all statistical algorithms,
-		data cleaning and visualization methods used in the project.
-		\item
-		Two papers were finished (unpublished): one is on semi-parametric
-		regression model for clustered data and another is on ridge estimator
-		in multivariate regression with correlated covariates.
-	\end{itemize*}
-	
-	\item
-	\headerrow
-		{\textbf{Operations and Maintenance Intern, Digital Resource, Shanghai}}
-		{\textbf{Jan 2011 – Feb 2011}}
-	\indent Responsible for the operation and maintenance for Shanghai Testing
-	Center's information system. Participated in building the information
-	infrastructure for Advanced Financial School of Shanghai Jiao Tong
-	University. Got knowledge and experience with Internet and computer
-	science.
-	
-	\item	
-	\headerrow
-		{\textbf{Analyst Intern, Shanghai Association for Quality, Shanghai}}
-		{\textbf{Jul 2010 – Aug 2010}}
-	\indent Planned and conducted the customer satisfaction survey sampling for the
-	Xujiahui business circle. Responsible for street interview, data entry,
-	collation, analysis and reporting writing, pretty much the whole cycle
-	of survey sampling.
+\subsection*{\centering RELEVENT EXPERIENCE}
+\headerrow
+	{\textbf{Research Assistant, East China Normal University, Shanghai}}
+	{\textbf{July 2012 – December 2013}}
+\begin{itemize}[topsep=2pt, itemsep=-2pt, nolistsep]
+	\item To apply my statistics knowledge and programming skills into practice, I persuaded professor Xiaolong Pu to let me participate in his project as a student research assistant about statistical process control in tobacco processing.
+	\begin{itemize}[topsep=2pt, itemsep=-2pt]
+		\item The only undergraduate student in a research team of 7 consists of graduate students and faculties.
+		\item Designed the control plan for tobacco dehumidification process under guidance, which is the most critical and complicated control unit among all tobacco processing processes.
+		\item Two papers were completed (unpublished): one is on semi-parametric regression model for clustered data and the other is on design and implementation of a quality control software.
+	\end{itemize}
+	\item With the project moved into a new phase, the team expanded to 21 members. After graduation, I was hired as a full-time research assistant and became a team leader.
+	\begin{itemize}[topsep=2pt, itemsep=-2pt]
+		\item Instructed new members to learn about previously used models and programs. Tutored 7 members once a week to re-write previous programs in a unified manner.
+		\item Developed an R package based on those re-written programs, which contains raw data, data cleaning methods, statistical algorithms and visualization methods used in the project.
+		\item A paper discussing ridge estimators in models with correlated covariates is in review.
+	\end{itemize}
 \end{itemize}
-\end{unindentsection}
 
-	
+\noindent\headerrow
+	{\textbf{Cluster Administrator, East China Normal University, Shanghai}}
+	{\textbf{March 2013 – December 2013}}
+\begin{itemize}[topsep=2pt, itemsep=-2pt]
+    \setlength{\itemsep}{-2pt}
+	\item Built the high-performance computing cluster for School of Finance and Statistics, East China Normal University, which provides web-based cluster computing environment of R and MATLAB to graduate students.
+	\item Responsible for cluster configuration, maintenance, access management and manual writing.  
+\end{itemize}
+
+\noindent\headerrow
+	{\textbf{Keynote lecture: \emph{R and Object-oriented Statistical Analysis}, $5^{th}$ China-R Conference, Shanghai}}
+	{\textbf{November 4, 2012}}
+\begin{itemize}[topsep=2pt, itemsep=-2pt]
+    \setlength{\itemsep}{-2pt}
+	\item Recommended by professor Yincai Tang to give a 45 minutes lecture about object systems in R.
+	\item Introduced the usage of S3, S4 and R5 objects in R.
+	\item Explained how these object systems can be utilized to make analysis more simple and accurate.
+\end{itemize}
+
+\noindent\headerrow
+	{\textbf{Operations and Maintenance Intern, Digital Resource, Shanghai}}
+	{\textbf{January 2011 – February 2011}}
+\begin{itemize}[topsep=2pt, itemsep=-2pt]
+    \setlength{\itemsep}{-2pt}
+	\item Responsible for operation and maintenance for Shanghai Testing Center's information system. 
+	\item Participated in the construction of information infrastructure for Advanced Financial School of Shanghai Jiao Tong University. 
+	\item Experienced and became interested in computer networks.
+\end{itemize}
+
+\noindent\headerrow
+	{\textbf{Analyst Intern, Shanghai Association for Quality, Shanghai}}
+	{\textbf{July 2010 – August 2010}}
+\begin{itemize}[topsep=2pt, itemsep=-2pt]
+	\item Conducted the customer satisfaction survey sampling for the Xujiahui business circle. Interviewed over 1,000 customers. 
+	\item Responsible for street interview, data entry, analysis and reporting writing. Experienced the whole cycle of survey sampling.
+\end{itemize}
+
+\vspace{0.2em}
 \hrule
-\vspace{-0.4em}
-\subsection*{\centering PROFESSIONAL SKILLS}
+\vspace{-1em}
+
+\subsection*{\centering SKILLS}
 
 \begin{description*}
 	\item[Statistical Computing:] Outstanding skills in R. Developer and maintainer of a CRAN package \emph{jtrans}. More repos on my GitHub: \url{http://www.github.com/wangyuchen}. Proficient in SAS and SPSS for standard statistical analysis.
-	\item[Mathematical Modeling:] Adept in MATLAB and LINGO during Mathematical Contest in Modeling. Experience with Octave and Gnuplot during the \emph{Machine Learning} course on Coursera.
-	\item[Operating Systems:] Strong interest in Unix-like systems, especially in the aspect of server management. Builder and administrator of the high-performance computing cluster for the School of Finance and Statistics, ECNU, which provides cloud computing environment of R and MATLAB.
 	\item[General Purpose Programming:] Extensive object-oriented programming experience with \CPP. Experience with Java.
-	\item[Specialities in Statistics:] Semi-parametric models; longitudinal data; Time series Analysis; Bayesian analysis; Nonparametric methods and other computationally intensive statistical methods.
-	\item[Web:] Web data crawler; Spatial analysis and geocoding; Web-based data visualization using interactive plots; Experience with HTML and CSS; Blog in Jekyll and builder of \url{http://www.biostat.com.cn}; 
+	\item[Operating Systems:] Strong interest in Unix-like systems, especially in the aspect of server management.
+	\item[Specialities in Statistics:] Semi-parametric models; Longitudinal data; Time series analysis; Bayesian analysis; Nonparametric methods and other computationally intensive statistical methods.
+	\item[Mathematical Modeling:] Adept at MATLAB and LINGO during Mathematical Contest in Modeling. Experience with Octave and Gnuplot during the \emph{Machine Learning} course on Coursera.
 	\item[Others:] Effective in \emph{knitr}, in which I can combine my favorite markup languages (Markdown/\LaTeX) with code/outputs produced by a script language (R).
+	\item[Web:] Web data crawler; Spatial analysis and geocoding; Web-based data visualization using interactive plots; Experience with HTML and CSS; Blog in Jekyll and builder of \url{http://www.biostat.com.cn}. 
 \end{description*}
 
-\hrule
-\vspace{-0.4em}
-\subsection*{\centering TALKS AND HONORS}
 
+\vspace{0.2em}
+\hrule
+\vspace{-1em}
+
+\subsection*{\centering HONORS}
 
 \begin{unindentsection}{\parindent}
 	\begin{itemize}
@@ -183,10 +187,6 @@
 		\headerrow
 			{\emph{Say Goodbye to Copy and Paste in Statistical Analysis}, $1^{st}$ R salon, East China Normal University}
 			{\textbf{Dec 18, 2013}}
-		\item
-		\headerrow
-			{\emph{Conducting Meta-analyses}, School of Finance and Statistics, East China Normal University}
-			{\textbf{May 15, 2013}}
 		\item 
 		\headerrow
 			{\emph{R and Object-oriented Statistical Analysis}, $5^{th}$ China-R Conference, Shanghai}
