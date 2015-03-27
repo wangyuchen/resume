@@ -1,39 +1,13 @@
-% resume.tex
-% vim:set ft=tex spell:
+\documentclass[11pt]{article}
+\pagestyle{empty}
 
-\documentclass[10pt]{article}
 \usepackage[letterpaper, margin=.5in]{geometry}
 \usepackage{mdwlist}
 \usepackage{hyperref}
 \usepackage{enumitem}
-
 \usepackage{fontspec}
 \setmainfont{Times New Roman}
 
-% \usepackage[T1]{fontenc}
-% \usepackage{textcomp}
-% \usepackage{tgpagella}
-\pagestyle{empty}
-% \setlength{\tabcolsep}{0em}
-
-
-
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
-\newenvironment{indentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{#1}}%
-	\item[]%
-}
-{\end{list}}
-
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{-0.5#1}}%
-	\item[]%
-}
-{\end{list}}
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
@@ -46,8 +20,9 @@
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
 
-
-
+% enumitem setup
+\setlist[description]{nolistsep}
+\setlist[itemize]{nolistsep}
 
 % and the actual content starts here
 \begin{document}
