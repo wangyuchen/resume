@@ -1,20 +1,24 @@
 \documentclass[11pt]{article}
-\pagestyle{empty}
 
 \usepackage[letterpaper, margin=.5in]{geometry}
 \usepackage{mdwlist}
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{fontspec}
+\usepackage[compact]{titlesec}
+
+\pagestyle{empty}
+\setlength{\skip\footins}{.3em}
 \setmainfont{Times New Roman}
+
 
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
-\end{tabular*}}
+	#1 & #2 \\
+\end{tabular*}
+}
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
@@ -38,12 +42,10 @@
 
 \vspace{-.8em}
 \hrule
-\vspace{-1em}
 
 
-\subsection*{\centering EDUCATION}
-\vspace{-.6em}
-
+\subsubsection*{\centering EDUCATION}
+\vspace{-.4em}
 
 \headerrow
 	{\textbf{Master of Arts in Statistics}, University of Missouri, Columbia, Missouri}
@@ -72,6 +74,7 @@
 
 
 \subsubsection*{\centering RELEVENT EXPERIENCE}
+\vspace{-.4em}
 
 \headerrow
 {\textbf{Research Assistant}, University of Missouri, Columbia, Missouri}
@@ -109,11 +112,9 @@
 
 \vspace{0.2em}
 \hrule
-\vspace{-1em}
 
-\vspace{-1em}
-\subsection*{\centering RELATED SKILLS}
-\vspace{-.6em}
+\subsubsection*{\centering RELATED SKILLS}
+\vspace{-.4em}
 
 \begin{description}
 	\item[Statistical Computing] Highly skilled in R; Developer of several R packages (see my GitHub: @wangyuchen); Proficient in OpenBUGS for Bayesian computing; Profient in SAS; Familiar with SPSS.
