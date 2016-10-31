@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage[letterpaper, margin=.5in]{geometry}
+\usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{mdwlist}
 \usepackage{hyperref}
 \usepackage{enumitem}
@@ -9,9 +9,8 @@
 
 \pagestyle{empty}
 \setlength{\skip\footins}{.3em}
+
 \setmainfont{Times New Roman}
-
-
 
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
@@ -22,11 +21,12 @@
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
-{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+{C\nolinebreak[4]\hspace{0em}\raisebox{.12ex}{\footnotesize\bf ++}}
 
 % enumitem setup
 \setlist[description]{nolistsep, leftmargin=\parindent,
 											labelindent=.33\parindent, rightmargin = .33\parindent}
+
 \setlist[itemize]{nolistsep, rightmargin = .33\parindent}
 
 % and the actual content starts here
@@ -35,7 +35,6 @@
 \begin{center}
 	\huge\textbf{YUCHEN WANG}
 \end{center}
-
 \noindent\headerrow{+1 (573) 239-5737}{30 Gardner Road, Apartment 4F}
 \headerrow{\href{mailto:ycwang0712@gmail.com}{ycwang0712@gmail.com}}{Brookline, Massachusetts, 02445}
 
@@ -46,26 +45,22 @@
 \vspace{-.3em}
 
 \headerrow
-	{\textbf{\emph{Master of Arts} in Statistics}, University of Missouri, Columbia, Missouri}
-	{\textbf{July 2015}}
+	{\textbf{\emph{Master of Arts} in Statistics}, University of Missouri}
+	{\textbf{January 2014 - July 2015}}
 	\begin{itemize}
-		\item Cumulative GPA 3.9 with A+ in Probability Theory, Advanced Linear Models and Bayesian Statistics.
-		\item Research work in spatial point patterns and numerical problems in gene expression analysis.
-		\item Authored R packages MethyBayes
-		(\href{http://cran.wustl.edu/web/packages/MethyBayes/index.html}{CRAN}) and
-		sppmix (\href{https://github.com/wangyuchen/sppmix}{GitHub}).
+		\item GPA 3.9 with A+ in Probability Theory, Advanced Linear Models and Bayesian Statistics.
+		\item Took research classes in spatial statistics. Developed sppmix (\href{https://github.com/wangyuchen/sppmix}{GitHub}) for fitting mixture models to spatial point pattern data.
 	\end{itemize}
-
 \noindent\headerrow
-	{\textbf{\emph{Bachelor of Science} in Statistics}, East China Normal University, Shanghai, China}
-	{\textbf{June 2013}}
+	{\textbf{\emph{Bachelor of Science} in Statistics}, East China Normal University}
+	{\textbf{September 2009 - June 2013}}
 	% \begin{itemize}
 	% 	\item Took \emph{Coursera} courses CS50, machine learning, high performance computing, etc.
 	% 	\item Nominated for best Bachelor's thesis: \textit{Residual Control Charts based on semi-parametric regression models}
 	% \end{itemize}
 \noindent\headerrow
-	{\textbf{\emph{Minor} in Computer Science}, Shanghai Jiao Tong University, Shanghai, China}
-	{\textbf{June 2013}}
+	{\textbf{\emph{Minor} (36 credits) in Computer Science}, Shanghai Jiao Tong University}
+	{\textbf{February 2011 - June 2013}}
 	% \begin{itemize}
 	% 	\item Completed all undergraduate curriculum of Computer Science and a graduation thesis.
 	% \end{itemize}
@@ -78,49 +73,58 @@
 \subsubsection*{\centering RELEVANT EXPERIENCE}
 \vspace{-.3em}
 
+
 \headerrow
 {\textbf{Analyst, Marketing Science}, In4mation Insights, Needham, Massachusetts}
 {\textbf{September 2015 – Present}}
 \begin{itemize}
-    \item Developed a scoring system to define product superiority for tobacco products.
-		\item Participated in several projects including topics like market structure, nested logit models, segmentation and partial least square path models.
-    \item Took part in the development of company's internal Bayesian software (in \emph{\CPP}) and developed an R interface and shiny front-end. Developed several R packages to facilitate the analysis and management of projects.
+    \item Analyzed consumer behavior data; developed a scoring system (method and software) by borrowing ideas from spatial statistics to define product superiority.
+    \item Participated in projects involving market structure, segmentation, and choice modeling; Used nested logit to improve a choice model, where the choices are from two sub-markets.
+    \item Developed an \emph{R} interface framework for a \CPP{} Bayesian Gibbs sampling library.
 \end{itemize}
+
 
 
 \noindent\headerrow
 {\textbf{Research Assistant}, University of Missouri, Columbia, Missouri}
 {\textbf{August 2014 – May 2015}}
-\begin{itemize}
-	% \item The only research assistant in our graduate class; Collaborated with PhD students in different research projects.
-	\item Optimized a Bayesian MCMC algorithm in Fortran for gene data. Reduced computation time from more than 3 hours to less than 20 seconds.
-	\item Parallelized a large-scale Bayes factor computation program in Fortran using both \emph{OpenMP} and \emph{MPI}; Tuned for distributed computing on different kinds of high performance computing clusters.
+\noindent\begin{itemize}
+    \item Worked with Ph.D. students on Bayesian computation problems. By caching candidate samples in a low-acceptance MCMC algorithm and vectorization (\emph{Fortran}), I sped up the algorithm by 30x and developed it into the MethyBayes package (\href{https://cran.rstudio.com/web/packages/MethyBayes/index.html}{R-CRAN}).
+    \item Parallelized a large-scale Bayes factor computation program (\emph{Fortran}) using both \emph{OpenMP} and \emph{MPI}; Tuned for distributed computing on different kinds of high-performance computing clusters to achieve the best performance.
 \end{itemize}
+
+
+
 
 \noindent\headerrow
 {\textbf{Research Assistant}, East China Normal University, Shanghai, China}
-{\textbf{July 2012 - June 2014}}
-\begin{itemize}
-	\item Joined a research team of Statistical Process Control (SPC) in tobacco manufacturing as a part-time research assistant.
-	\begin{itemize}
-		\item The only undergraduate student in a research team of 7 members consisting graduate students and faculties.
-		\item Experienced in analyzing real-world big data (GBs per hour) from observational studies on Amazon EC2 using parallelized algorithms.
-		\item Designed a control scheme for controlling tobacco dehumidification process, which is the most critical and complicated control unit among all tobacco manufacturing processes.
-		\item Collaborated with both quality control team at the tobacco manufacturing factory and software engineering team of an IT company. The final quality control product could precisely detect abnormalities of the manufacturing in advance so as to minimize the cost of failure products.
-	\end{itemize}
-
-	\item Hired as a full-time research assistant in charge of the SPC project after graduation. Led a team of 21 members.
-	\begin{itemize}
-		% \item Mentored 7 members in the team. Trained all new members about previously used models and programs.
-		\item Developed an R package for the project containing raw data, data cleaning routines, statistical algorithms and visualization tools. Programmed over 2,500 lines of R code for this project.
-	\end{itemize}
-
-% 	\item Recruited 3 undergraduate students for the development of a statistical software with user interface as a product for a two stage randomized experiment project.
-% 	\begin{itemize}
-% 		\item Worked remotely with the rest of the team while studying abroad.
-% 		\item Designed and developed an interactive data visualization web application in R and \emph{Shiny}.
-% 	\end{itemize}
+{\textbf{June 2012 - July 2014}}
+\noindent\begin{itemize}
+    \item Participated in a Statistical Process Control project for tobacco manufacturing.  Developed quality control models for high-frequency data (GBs/hour) based on a semi-parametric regression model.
+    \item Led a group of 4 members, designed an interactive web application for a sequential experimental design procedure (\emph{R}/\emph{Shiny}).
 \end{itemize}
+
+
+% 	\item Joined a research team of Statistical Process Control (SPC) in tobacco manufacturing as a part-time research assistant.
+% 	\begin{itemize}
+% 		\item The only undergraduate student in a research team of 7 members consisting graduate students and faculties.
+% 		\item Experienced in analyzing real-world big data (GBs per hour) from observational studies on Amazon EC2 using parallelized algorithms.
+% 		\item Designed a control scheme for controlling tobacco dehumidification process, which is the most critical and complicated control unit among all tobacco manufacturing processes.
+% 		\item Collaborated with both quality control team at the tobacco manufacturing factory and software engineering team of an IT company. The final quality control product could precisely detect abnormalities of the manufacturing in advance so as to minimize the cost of failure products.
+% 	\end{itemize}
+%
+% 	\item Hired as a full-time research assistant in charge of the SPC project after graduation. Led a team of 21 members.
+% 	\begin{itemize}
+% 		% \item Mentored 7 members in the team. Trained all new members about previously used models and programs.
+% 		\item Developed an R package for the project containing raw data, data cleaning routines, statistical algorithms and visualization tools. Programmed over 2,500 lines of R code for this project.
+% 	\end{itemize}
+%
+% % 	\item Recruited 3 undergraduate students for the development of a statistical software with user interface as a product for a two stage randomized experiment project.
+% % 	\begin{itemize}
+% % 		\item Worked remotely with the rest of the team while studying abroad.
+% % 		\item Designed and developed an interactive data visualization web application in R and \emph{Shiny}.
+% % 	\end{itemize}
+% \end{itemize}
 
 
 	\vspace{0.2em}
@@ -130,13 +134,13 @@
 	\vspace{-.3em}
 
 	\begin{description}
-		\item[Statistical Computing] Highly skilled in \emph{R}; Developer of 15+ \emph{R}
+		\item[Statistical Computing] Expert in \emph{R}; Developer of 15+ \emph{R}
 		packages (GitHub: \href{https://www.github.com/wangyuchen}{@wangyuchen});
-		Mostly used packages including \emph{MCMCpack} for Bayesian computing; \emph{spatstat} and \emph{splancs} for spatial point pattern analysis; \emph{ggplot2} and \emph{knitr} for graphics and reports; \emph{shiny} user. Proficent in \emph{SAS} procedures including \emph{glm}, \emph{nlin}, \emph{genmod} and \emph{mixed}.
-		\item[Database] Everyday user of \emph{dplyr}, not a fan of \emph{data.table}, but fluent in both;  Familiar with relational database and SQL concepts.
-		\item[General Purpose Programming] Solid understanding of object-oriented programming. Experience in integrating \emph{\CPP} and \emph{Fortran} into \emph{R} packages. Extensive parallel computing experience in \emph{OpenMP} and \emph{MPI} with \emph{Fortran}. Proficient in \emph{MATLAB}.
-		\item[Specialities in Statistics] Solid foundation in mathematical statistics and multivariate analysis; Extensive experience in Bayesian analysis; Spatial analysis with emphasis in point pattern models and spatio-temporal models; Statistical Process Control; Data mining and machine learning.
-		\item[Operating Systems] Everyday Linux (Cent OS) user; \emph{VIM} user. Responsible for HPC cluster management at ECNU.
+		Familiar with most MCMC and spatial statistics packages; experienced with lower-level language integration (\CPP{}/\emph{RCpp}/\emph{Fortran}),   \emph{shiny} web applications, and \emph{ggplot2} and \emph{knitr} for graphics and reports. Proficent in \emph{SAS} procedures for statistical models like \emph{glm}, \emph{nlin}, \emph{genmod}, and \emph{mixed}.
+		\item[Databases] Familiar with relational databases and SQL concepts. Everyday user of \emph{dplyr} and \emph{tidyr}; not a fan of \emph{data.table}, but fluent in both.
+		% \item[General Purpose Programming] Solid understanding of object-oriented programming. Experience in integrating \emph{\CPP} and \emph{Fortran} into \emph{R} packages. Extensive parallel computing experience in \emph{OpenMP} and \emph{MPI} with \emph{Fortran}. Proficient in \emph{MATLAB}.
+		% \item[Specialities in Statistics] Solid foundation in mathematical statistics and multivariate analysis; Extensive experience in Bayesian analysis; Spatial analysis with emphasis in point pattern models and spatio-temporal models; Statistical Process Control; Data mining and machine learning.
+		% \item[Operating Systems] Everyday Linux (Cent OS) user; \emph{VIM} user. Responsible for HPC cluster management at ECNU.
 	\end{description}
 
 
